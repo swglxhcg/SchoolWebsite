@@ -105,8 +105,7 @@ a {
   top: 48px;
   display: none;
 }
-.subNav dd {
-}
+
 .subNav a {
   color: #fff;
   padding: 10px;
@@ -157,11 +156,6 @@ a {
 }
 .header.currents .nav-wrapper {
   height: 56px;
-}
-.header.currents .nav ul li > a {
-}
-.header.currents .nav ul li.on > a,
-.header.currents .nav ul li:hover > a {
 }
 .header.currents {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
