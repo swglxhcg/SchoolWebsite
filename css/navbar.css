@@ -1,7 +1,8 @@
+/* body背景色调试 */
 body {
   background-color: black;
 }
-
+/* 标签a去除下划线 */
 a {
   text-decoration: none;
 }
@@ -12,6 +13,7 @@ a {
   height: auto;
   z-index: 10;
   position: relative;
+  /* 平滑动画效果 */
   transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
