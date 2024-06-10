@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
   min-width: 300px;
@@ -37,7 +41,7 @@ body {
   }
 
 .nav {
-  height: 49px;
+  height: 0px;
   line-height: 49px;
   position: absolute;
   left: 682px;
