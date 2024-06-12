@@ -8,6 +8,15 @@ a {
   text-decoration: none;
 }
 
+.t-header, .t-fsnav, .t-nav{
+  /* 平滑动画效果 */
+  transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+}
+
 /* header整体 */
 .t-header {
   width: 100%;
@@ -17,13 +26,6 @@ a {
   z-index: 10;
   position: relative;
   right: 0;
-  /* 平滑动画效果 */
-  transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -webkit-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  
 }
 
 .t-header:before{
@@ -40,6 +42,7 @@ a {
   height: 100%;
 }
 
+/* Logo条 */
 .t-logo-bg{
   /* background-image: url("/images/title_logo_bar.png"); */
   object-fit: none;
@@ -59,6 +62,7 @@ a {
     overflow: visible;
     font-size: 0;
     top: 15px;
+    z-index: 10;
 }
 .t-header .logo a {
     display: inline-block;
@@ -73,7 +77,7 @@ a {
     float: left;
 }
 
-
+/* 全屏导航按钮 */
 .t-fsnav-box{
   position: absolute;
   right: 0;
@@ -91,16 +95,18 @@ a {
 }
 
 .t-fsnav-btn a{
+  /* 限定可点击区域 */
   width: 83.3%;
   height: 80%;
   position: absolute;
   right: 0;
 }
-.t-fsnav-btn a::after{
-  background: url("/images/navA.png") no-repeat center;
+
+.t-fsnav-btn a img{
   position: absolute;
   display: block;
-  top: 0;
+  right: 25%;
+  top: 30%;
 }
 
 /* 搜索框 */
@@ -114,6 +120,7 @@ a {
 
 /* 搜索框 输入框伸缩 */
 .t-sc-box:not(.t-open) input.t-form-ctrl {
+  /* 输入框不显示 */
 	width: 0 !important;
 	/* padding: 0 !important; */
 	background: transparent;
@@ -125,6 +132,7 @@ a {
 }
 
 .t-sc-box input.t-form-ctrl {
+  /* 输入框显示 */
 	width: 200px !important;
 	transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   position: absolute;
@@ -268,6 +276,42 @@ a {
   background: rgba(0, 0, 0, 0.1);
 }
 
+/* 全屏导航 */
+.t-fsnav{
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  /* 背景图变暗 */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/fsnavBg.jpg") no-repeat;
+  background-size: cover;
+}
+.t-fsnav .t-fsnav-main{
+  top: 60px;
+  position: absolute;
+  margin: 0 auto;
+  right: 5%;
+  width: 90%;
+}
+
+.t-fsnav .t-fsnav-main ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+.t-fsnav .t-fsnav-main li{
+  display: inline;
+  float: left;
+  /* 宽暂定 */
+  width: 25%;
+  text-align: center;
+}
+
 /* 页面上移，导致导航栏在画面外 时的样式 */
 .t-header.currents {
   height: 85px;
@@ -313,17 +357,27 @@ a {
 }
 
 /* 全屏导航 */
-body.scnavShow{
-
+body.fsnavShow{
+  /* 隐藏视区外内容 */
+  overflow: hidden;
 }
 
-body.scnavShow .t-nav{
+body.fsnavShow .t-nav{
+  /* 隐藏导航栏 */
   visibility: hidden;
   opacity: 0;
 }
 
+body.fsnavShow img.t-bg-header{
+  visibility: hidden;
+  opacity: 0;
+}
 
-
+body.fsnavShow .t-fsnav{
+  /* 隐藏导航栏 */
+  visibility: visible;
+  opacity: 1;
+}
 
 
 
