@@ -1,93 +1,126 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>标题</title>
-    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/t-navbar.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    
   </head>
 
   <body>
-    <header class="header">
-      <div class="wrapTop">
-        <div class="top">
-          <div class="logo">
-            <a
-              id="logo1"
-              class="logo1"
-              href="http://www.qztc.edu.cn/jkxy/main.htm"
-              ><img src="images/logo.png" alt=""
-            /></a>
-          </div>
-          
-          <nav class="nav samePadding">
-            <ul>
-              <li>
-                <a href="http://www.qztc.edu.cn/jkxy/main.htm" target="_self"
-                  >首页</a
-                >
-              </li>
+    <header class="t-header">
+        <img class="t-bg-header" src="/images/title_logo_bar.png"></img>
 
-              <li>
-                <a href="634/list.htm" target="_self">学院概况</a>
-                <div class="subNav">
-                  <ul>
-                    <li><a href="643/list.htm" target="_self">学院简介</a></li>
-
-                    <li><a href="644/list.htm" target="_self">机构设置</a></li>
-
-                    <li><a href="szdw/list.htm" target="_self">师资队伍</a></li>
-
-                    <li>
-                      <a href="645/list.htm" target="_self">教学科研单位</a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="http://www.qztc.edu.cn/jkxy/2018/0109/c646a22137/page.htm"
-                        target="_self"
-                        >专业介绍</a
-                      >
-                    </li>
-                  </ul>
+        <div class="t-logo-bg">
+            <div class="t-mgTop">
+                <!-- 搜索框 -->
+                <div class="t-fsnav-box">
+                    <div class="t-fsnav-btn">
+                        <a href="#">
+                            <!-- <img src="images/search_btn_bg_withsd.png"></img> -->
+                        </a>
+                    </div>
                 </div>
-              </li>
 
-              <li><a href="bkjy/list_2.htm" target="_self">本科生教育</a></li>
+                <div class="t-top">
 
-              <li>
-                <a href="yjsjy_7000/list_2.htm" target="_self">研究生教育</a>
-                <div class="subNav">
-                  <ul>
-                    <li>
-                      <a href="sssdsfc/list.htm" target="_self"
-                        >硕士生导师风采</a
-                      >
-                    </li>
-                  </ul>
+                    <div class="logo">
+                        <a id="logo1" class="logo1" href="http://www.qztc.edu.cn/jkxy/main.htm"><img src="images/logo.png" alt=""/></a>
+
+                        <div class="t-sc-box">
+                            <div class="t-sc-btn">
+                                <a href="#"><img src="images/sc-btn-img.png"></img></a>
+                                <input class="t-form-ctrl" type="txt" placeholder="搜索" autocomplete="off"></input>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="t-nav">
+                        <ul>
+                        <li class='t-mainli'><a href="http://www.qztc.edu.cn/jkxy/main.htm" target="_self">首页</a>
+                        </li>
+
+                        <li class='t-mainli'><a href="634/list.htm" target="_self">学院概况</a>
+                            <div class="t-navSub">
+                            <ul>
+                                <li><a href="643/list.htm" target="_self">学院简介</a></li>
+                                <li><a href="644/list.htm" target="_self">机构设置</a></li>
+                                <li><a href="szdw/list.htm" target="_self">师资队伍</a></li>
+                                <li> <a href="645/list.htm" target="_self">教学科研单位</a></li>
+                                <li><a href="http://www.qztc.edu.cn/jkxy/2018/0109/c646a22137/page.htm" target="_self">专业介绍</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li class='t-mainli'><a href="yjsjy_7000/list_2.htm" target="_self">教育教学</a>
+                            <div class="t-navSub">
+                            <ul>
+                                <li><a href="bkjy/list_2.htm" target="_self">本科生教育</a></li>
+                                <li><a href="bkjy/list_2.htm" target="_self">本科生教育</a></li>
+                                <li><a href="sssdsfc/list.htm" target="_self">硕士生导师风采</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li class='t-mainli'><a href="yjsjy_7000/list_2.htm" target="_self">学生园地</a>
+                            <div class="t-navSub">
+                            <ul>
+                                <li><a href="#" target="_self">新闻动态</a></li>
+                                <li><a href="#" target="_self">学生图片</a></li>
+                                <li><a href="#" target="_self">通知公告</a></li>
+                                <li><a href="#" target="_self">就业信息</a></li>
+                                <li><a href="#" target="_self">相关下载</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li class='t-mainli'><a href="yjsjy_7000/list_2.htm" target="_self">志愿行动</a>
+                            <div class="t-navSub">
+                            <ul>
+                                <li><a href="#" target="_self">志愿发布</a></li>
+                                <li><a href="#" target="_self">志愿报名</a></li>
+                                <li><a href="#" target="_self">志愿风采</a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li class='t-mainli'><a href="kygz/list_2.htm" target="_self">学术科研</a></li>
+
+                        <li class='t-mainli'>
+                            <a href="640/list_2.htm" target="_self">党建工作</a>
+                            <!-- <div class="t-navSub">
+                            <ul>
+                                <li><a href="ztjy/list.htm" target="_self">主题教育</a></li>
+                                <li><a href="djxxjy/list.htm" target="_self">党纪学习教育</a></li>
+                            </ul>
+                            </div> -->
+                        </li>
+
+                        <li class='t-mainli'><a href="641/list_2.htm" target="_self">宣传思想文化工作</a></li>
+
+                        <li class='t-mainli'><a href="641/list_2.htm" target="_self">学科赛事</a></li>
+
+                        </ul>
+
+                        <!-- <div class="t-fullsnav-btn">
+                            <a href="#"><img src="images/search_btn_bg_withsd.png"></img></a>
+                        </div> -->
+
+                    </nav>
+
+                    
+
                 </div>
-              </li>
-
-              <li><a href="kygz/list_2.htm" target="_self">学术科研</a></li>
-
-              <li>
-                <a href="640/list_2.htm" target="_self">党建工作</a>
-                <div class="subNav">
-                  <ul>
-                    <li><a href="ztjy/list.htm" target="_self">主题教育</a></li>
-                    <li>
-                      <a href="djxxjy/list.htm" target="_self">党纪学习教育</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li>
-                <a href="641/list_2.htm" target="_self">宣传思想文化工作</a>
-              </li>
-            </ul>
-          </nav>
+            </div>
         </div>
-      </div>
     </header>
+
+    <div class="t-rotpic">
+        <p>???6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666</p>
+        <h1>666</h1>
+    </div>
   </body>
+  <script type="text/javascript" src="js/t-navbar.js"></script>
 </html>

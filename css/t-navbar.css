@@ -1,0 +1,335 @@
+/* body背景色调试 */
+body {
+  background-color: rgb(180, 100, 100);
+  margin: 0 !important;
+}
+/* 标签a去除下划线 */
+a {
+  text-decoration: none;
+}
+
+/* header整体 */
+.t-header {
+  width: 100%;
+  min-width: 300px;
+  top: 0;
+  height: 110px;
+  z-index: 10;
+  position: relative;
+  right: 0;
+  /* 平滑动画效果 */
+  transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  
+}
+
+.t-header:before{
+  position: absolute;
+  background-image: url("/images/header-bg.png") repeat-x;
+  top: 60px;
+}
+
+/* header底图 */
+.t-bg-header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+
+.t-logo-bg{
+  /* background-image: url("/images/title_logo_bar.png"); */
+  object-fit: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.t-header .t-mgTop{
+  margin: 0 30px 0 !important;
+}
+
+.t-header .logo {
+    width: 95%;
+    position: relative;
+    left: 0;
+    overflow: visible;
+    font-size: 0;
+    top: 15px;
+}
+.t-header .logo a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.t-header .logo img {
+    width: 100%;
+}
+.t-header .logo1 {
+    width: 500px;
+    float: left;
+}
+
+
+.t-fsnav-box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  z-index: 10;
+  height: 80px;
+}
+
+.t-fsnav-btn {
+  width: 100%;
+  height: 100%;
+  background: url("/images/search_btn_bg_withsd.png") right top;
+  background-size: cover;
+}
+
+.t-fsnav-btn a{
+  width: 83.3%;
+  height: 80%;
+  position: absolute;
+  right: 0;
+}
+.t-fsnav-btn a::after{
+  background: url("/images/navA.png") no-repeat center;
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+/* 搜索框 */
+.t-sc-box{
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 50px;
+  z-index: 10;
+}
+
+/* 搜索框 输入框伸缩 */
+.t-sc-box:not(.t-open) input.t-form-ctrl {
+	width: 0 !important;
+	/* padding: 0 !important; */
+	background: transparent;
+  visibility: hidden;
+  z-index: -1;
+  padding: 10% 30% 10% 20%;
+  height: 70%;
+  top: 5%;
+}
+
+.t-sc-box input.t-form-ctrl {
+	width: 200px !important;
+	transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  position: absolute;
+  right: 50px;
+  visibility: visible;
+  z-index: -1;
+  padding: 10% 30% 10% 20%;
+  height: 70%;
+  top: 5%;
+}
+
+/* 搜索框输入框 */
+.t-sc-btn input{  
+	/* background:none;   */
+	outline:none;  
+	border:0px;
+}
+/* 搜索框图片 */
+.t-sc-btn img{
+  width: 100%;
+}
+
+/* 一级导航栏 */
+.t-nav {
+  height: 0px;
+  line-height: 49px;
+  position: absolute;
+  /* left: 682px; */
+  right: 60px;
+  bottom: 0;
+  top: 60px;
+}
+.t-nav > ul {
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+.t-nav > ul > li {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  transform: perspective(5000px);
+  -moz-transform: perspective(5000px);
+  -o-transform: perspective(5000px);
+  -webkit-transform: perspective(5000px);
+  padding: 0;
+}
+.t-nav > ul > li > a {
+  font-size: 18px;
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 0 13px;
+}
+
+.t-nav > ul > li > a:hover:after {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  content: "";
+  left: 0;
+  bottom: 0;
+}
+
+.t-nav > ul > li.on .t-navSub {
+  display: block;
+}
+
+
+/* 二级导航显示动画效果 帧动画 */
+.flipInY{
+	-webkit-animation-name: flipInY ;
+	animation-name: flipInY ;
+	animation-duration: 0.6s; 
+	-webkit-animation-duration: 0.6s;
+	animation-timing-function: ease-in-out; 
+	-webkit-animation-timing-function: ease-in-out;   
+	visibility: visible !important; 
+	display: block;
+}
+@keyframes flipInY  {
+  from {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+		transform: perspective(400px);
+  }
+}
+
+/* 二级导航默认样式 */
+.t-navSub {
+  width: 100%;
+  background: #9a0000;
+  white-space: normal;
+}
+.t-navSub {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  display: none;
+}
+
+.t-navSub ul{
+  padding: 0;
+}
+
+.t-navSub a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+  line-height: 24px;
+  border-top: 1px solid #9a0000;
+  font-size: 16px;
+}
+.t-navSub a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* 页面上移，导致导航栏在画面外 时的样式 */
+.t-header.currents {
+  height: 85px;
+  line-height: 85px;
+  background: none;
+  background-color: #970000;
+  top: 0;
+}
+.t-header.currents .logo {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.t-header.currents .logo1 {
+  width: 320px;
+}
+.t-header.currents .logo img {
+  display: block;
+}
+.t-header.currents .top {
+  height: 85px;
+}
+.t-header.currents .ser {
+  display: none;
+}
+.t-header.currents .top_nav {
+  display: none;
+}
+.t-header.currents .t-nav {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.t-header.currents .t-nav li {
+  background: none;
+}
+.t-header.currents .t-navSub {
+  top: 48px;
+}
+.t-header.currents .t-nav-wrapper {
+  height: 56px;
+}
+.t-header.currents {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 全屏导航 */
+body.scnavShow{
+
+}
+
+body.scnavShow .t-nav{
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+
+
+
+
+.t-rotpic{
+  height: 2000px;
+  position: absolute;
+  top: 60px;
+}
+
