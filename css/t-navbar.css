@@ -1,4 +1,4 @@
-/* body背景色调试 */
+/* ==========body背景色调试========== */
 body {
   background-color: rgb(180, 100, 100);
   margin: 0 !important;
@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 }
 
-.t-header, .t-fsnav, .t-nav{
+.t-header, .t-fsnav, .t-nav, .t-fsnav a{
   /* 平滑动画效果 */
   transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
@@ -17,7 +17,7 @@ a {
   -o-transition: all ease-in-out 0.3s;
 }
 
-/* header整体 */
+/* ====================header整体==================== */
 .t-header {
   width: 100%;
   min-width: 300px;
@@ -42,7 +42,7 @@ a {
   height: 100%;
 }
 
-/* Logo条 */
+/* ====================Logo条==================== */
 .t-logo-bg{
   /* background-image: url("/images/title_logo_bar.png"); */
   object-fit: none;
@@ -69,15 +69,14 @@ a {
     *display: inline;
     *zoom: 1;
 }
-.t-header .logo img {
-    width: 100%;
-}
-.t-header .logo1 {
+
+.t-header .t-logo1 {
     width: 500px;
     float: left;
+    position: absolute;
 }
 
-/* 全屏导航按钮 */
+/* ====================全屏导航按钮==================== */
 .t-fsnav-box{
   position: absolute;
   right: 0;
@@ -109,7 +108,7 @@ a {
   top: 30%;
 }
 
-/* 搜索框 */
+/* ====================搜索框==================== */
 .t-sc-box{
   position: absolute;
   right: 0;
@@ -155,7 +154,7 @@ a {
   width: 100%;
 }
 
-/* 一级导航栏 */
+/* ====================一级导航栏==================== */
 .t-nav {
   height: 0px;
   line-height: 49px;
@@ -171,7 +170,7 @@ a {
   text-align: center;
   white-space: nowrap;
 }
-.t-nav > ul > li {
+.t-nav > ul > li ,.t-nav > ul > div {
   position: relative;
   text-align: center;
   display: inline-block;
@@ -207,7 +206,7 @@ a {
 }
 
 
-/* 二级导航显示动画效果 帧动画 */
+/* ==========二级导航显示动画效果 帧动画========== */
 .flipInY{
 	-webkit-animation-name: flipInY ;
 	animation-name: flipInY ;
@@ -247,7 +246,7 @@ a {
   }
 }
 
-/* 二级导航默认样式 */
+/* ====================二级导航默认样式==================== */
 .t-navSub {
   width: 100%;
   background: #9a0000;
@@ -276,7 +275,7 @@ a {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* 全屏导航 */
+/* ====================全屏导航==================== */
 .t-fsnav{
   visibility: hidden;
   opacity: 0;
@@ -308,11 +307,24 @@ a {
   display: inline;
   float: left;
   /* 宽暂定 */
-  width: 25%;
+  width: 12.5%;
   text-align: center;
 }
 
-/* 页面上移，导致导航栏在画面外 时的样式 */
+.t-fsnav h2 a{
+  /* 一级链接默认色 */
+  color: #eeeeee;
+}
+.t-fsnav a:hover{
+  /* 鼠标划过 */
+  color: gold;
+}
+.t-fsnav h3 a{
+  color: #aaaaaa;
+}
+
+
+/* ==========页面上移，导致导航栏在画面外 时的样式========== */
 .t-header.currents {
   height: 85px;
   line-height: 85px;
@@ -324,7 +336,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-.t-header.currents .logo1 {
+.t-header.currents .t-logo1 {
   width: 320px;
 }
 .t-header.currents .logo img {
@@ -356,7 +368,7 @@ a {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* 全屏导航 */
+/* ====================全屏导航==================== */
 body.fsnavShow{
   /* 隐藏视区外内容 */
   overflow: hidden;
@@ -379,8 +391,30 @@ body.fsnavShow .t-fsnav{
   opacity: 1;
 }
 
+/* 顶导航 */
+header.t-scrtop img{
+  visibility: hidden;
+  opacity: 0;
+}
+header.t-scrtop nav.t-nav{
+  position: fixed;
+  top: 60px;
+  
+}
+header.t-scrtop .t-center-logo{
+  visibility: visible;
+  visibility: 1;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+}
+.t-center-logo{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
 
-
+/* ====================轮播图==================== */
 .t-rotpic{
   height: 2000px;
   position: absolute;
