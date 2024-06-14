@@ -107,7 +107,7 @@ a {
   /* Height Header */
   height: 110px;
   z-index: 10;
-  position: relative;
+  position: absolute;
   right: 0;
 }
 
@@ -338,7 +338,7 @@ a {
   color: gold;
 }
 .t-fsnav h3{
-  height: 2em;
+  height: 1.5em;
 }
 .t-fsnav h3 a{
   color: #aaaaaa;
@@ -373,6 +373,19 @@ body.fsnavShow .t-top > .logo > img{
   left: 30px;
 }
 
+body.fsnavShow .t-btn-top{
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+body.fsnavShow .t-sc-box{
+  position: fixed !important;
+  right: 5% !important;
+  top: 5px !important;
+  width: 50px;
+  z-index: 10;
+}
+
 /* ==========页面上移，导致导航栏在画面外 时的样式========== */
 
 
@@ -399,7 +412,7 @@ header.t-scrtop nav.t-nav{
   left: 0;
 }
 /* 搜索按钮 */
- header.t-scrtop .t-top .t-sc-box{
+header.t-scrtop .t-top .t-sc-box{
   position: fixed;
   right: 5%;
   top: 85%;
@@ -457,14 +470,43 @@ header.t-scrtop .t-center-logo{
   background-size: cover;
 }
 
+header.t-scrtop .t-btn-top{
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.t-top .t-sc-box .t-btn-top{
+  position: absolute;
+  bottom: 50px;
+}
+
+.t-btn-top{
+  visibility: hidden;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #eeeeee;
+}
+
 /* ====================轮播图==================== */
-.t-rotpic-container{
+.t-rotpic-ct{
+  text-align: center;
   height: 100%;
   position: absolute;
   top: 60px;
   width: 100%;
+  /* padding-top: 60px; */
 }
-.t-rotpic-container .t-rotpic-item{
+
+.t-rotpic-ct .t-rotpic-container{
+  height: 100%;
+  width: 100%;
+}
+.t-rotpic-ct .t-rotpic-container .t-rotpic-item{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -472,13 +514,38 @@ header.t-scrtop .t-center-logo{
   transition: opacity 1s ease;
   top: 0;
 }
-.t-rotpic-container .t-rotpic-item img{
+.t-rotpic-ct .t-rotpic-container .t-rotpic-item img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.t-rotpic-container .t-rotpic-item.t-rotpic-active{
+.t-rotpic-ct .t-rotpic-container .t-rotpic-item.t-rotpic-active{
   opacity: 1;
+}
+.t-rotpic-btn-container{
+  /* width: 100%; */
+  height: 15px;
+  position: absolute;
+  bottom: 5%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%/50px;
+  padding: 5px;
+  display: inline-block;
+}
+.t-rotpic-btn-container .t-rotpic-btn{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.t-rotpic-btn-container .t-rotpic-btn.t-rotpic-active{
+  background: rgba(25, 55, 50, 0.8);
 }
 
 .othercontext{

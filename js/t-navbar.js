@@ -4,7 +4,10 @@ tNavSubShow();
 tSearchInputBoxShow();
 tFsnavShowSwitch();
 tScrollWindow();
+tResizeWindow();
 tRotpicPlay();
+tSpanClick();
+tScrollToTopBtn();
 
 // 调用函数END
 
@@ -68,35 +71,76 @@ function tScrollWindow(){
 
 function tResizeWindow(){
     $(window).resize(function () { 
-        
+        $(".t-rotpic-ct").css("height", window.innerHeight-60+"px");
+        // $(".t-center-logo-bg").css("height", window.innerWidth / 9+"%");
     });
 };
 
+
+
+const t_rotpic_item = document.querySelectorAll('.t-rotpic-item');
+const t_rotpic_btn = document.querySelectorAll('.t-rotpic-btn');
+let t_curPic = 0;
+function showPic(index) {
+    t_rotpic_item.forEach((t_pic_item, i) => {
+      if (i === index) {
+        t_pic_item.classList.add('t-rotpic-active');
+      } else {
+        t_pic_item.classList.remove('t-rotpic-active');
+      }
+    });
+    t_rotpic_btn.forEach((t_pic_btn, i) => {
+      if (i === index) {
+        t_pic_btn.classList.add('t-rotpic-active');
+      } else {
+        t_pic_btn.classList.remove('t-rotpic-active');
+      }
+    });
+  }
+
+function nextPic() {
+  t_curPic++;
+  if (t_curPic >= t_rotpic_item.length) {
+    t_curPic = 0;
+  }
+  showPic(t_curPic);
+}
+
+function tScrollToTopBtn() {
+    document.querySelector(".t-btn-top").addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+    });
+  }
+  
+
 function tRotpicPlay() { 
     document.addEventListener("DOMContentLoaded", function(event) {
-        const t_rotpic_item = document.querySelectorAll('.t-rotpic-item');
-        let t_curPic = 0;
+        // 设置轮播图高度以适合屏幕
+        $(".t-rotpic-ct").css("height", window.innerHeight-60+"px");
+        // 以下计算轮播图
       
-        function showPic(index) {
-          t_rotpic_item.forEach((t_pic_item, i) => {
-            if (i === index) {
-              t_pic_item.classList.add('t-rotpic-active');
-            } else {
-              t_pic_item.classList.remove('t-rotpic-active');
-            }
-          });
-        }
-      
-        function nextPic() {
-          t_curPic++;
-          if (t_curPic >= t_rotpic_item.length) {
-            t_curPic = 0;
-          }
-          showPic(t_curPic);
-        }
-      
-        setInterval(nextPic, 3000); // 每 2 秒切换一张幻灯片
-      
-        showPic(t_curPic); // 显示第一张幻灯片
+        tAutoSwitchTimer=setInterval(nextPic, 3000);
+        window.tGlobalAutoSwitchTimer=tAutoSwitchTimer;
+        
+        showPic(t_curPic); 
       });
+};
+
+// 轮播图小点的点击效果
+function tSpanClick(){
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const tSpanElements = document.querySelectorAll('.t-rotpic-btn');
+        tSpanElements.forEach((tSpan, i) => {
+            tSpan.addEventListener('click', () => {
+                console.log(i);
+                t_curPic=i;
+                clearInterval(tGlobalAutoSwitchTimer);
+                showPic(t_curPic);
+                tGlobalAutoSwitchTimer=setInterval(nextPic, 3000);
+            });
+        });
+    });
 };
