@@ -23,6 +23,7 @@ a {
   min-width: 300px;
   top: 0;
   /* Height Header */
+  /* Height Header */
   height: 110px;
   z-index: 10;
   position: relative;
@@ -89,12 +90,14 @@ a {
 }
 
 .t-fsnav-box .t-fsnav-btn {
+.t-fsnav-box .t-fsnav-btn {
   width: 100%;
   height: 100%;
   background: url("/images/search_btn_bg_withsd.png") right top;
   background-size: cover;
 }
 
+.t-fsnav-box .t-fsnav-btn a{
 .t-fsnav-box .t-fsnav-btn a{
   /* 限定可点击区域 */
   width: 83.3%;
@@ -292,7 +295,7 @@ a {
   background-size: cover;
 }
 .t-fsnav .t-fsnav-main{
-  top: 60px;
+  top: 100px;
   position: absolute;
   margin: 0 auto;
   right: 5%;
@@ -301,7 +304,7 @@ a {
 
 .t-fsnav .t-fsnav-main ul{
 	list-style-type:none;
-	margin:0;
+	margin:0 10px 0 10px;
 	padding:0;
 }
 
@@ -311,6 +314,11 @@ a {
   /* 宽暂定 */
   width: 12.5%;
   text-align: center;
+}
+
+.t-fsnav h2{
+  margin: 0 0 10px 0;
+  height: 2em;
 }
 
 .t-fsnav h2 a{
@@ -394,7 +402,7 @@ body.fsnavShow .t-fsnav{
 }
 
 /* ====================顶导航==================== */
-header.t-scrtop img{
+header.t-scrtop > img{
   visibility: hidden;
   opacity: 0;
 }
@@ -405,7 +413,11 @@ header.t-scrtop nav.t-nav{
   line-height: 49px;
   right: 60px;
   left: 60px;
-
+}
+header.t-scrtop .t-top .t-sc-box{
+  position: fixed;
+  right: 7%;
+  top: 1px;
 }
 header.t-scrtop .t-center-logo-block{
   visibility: visible;
@@ -413,6 +425,9 @@ header.t-scrtop .t-center-logo-block{
   width: 410px;
   height: 0;
   /* position: relative; */
+}
+header.t-scrtop .t-fsnav-box{
+  position: fixed;
 }
 .t-center-logo-block{
   visibility: hidden;
@@ -446,8 +461,12 @@ header.t-scrtop .t-center-logo{
 
 /* ====================轮播图==================== */
 .t-rotpic{
-  height: 2000px;
+  height: 100%;
   position: absolute;
   top: 60px;
 }
 
+.othercontext{
+  height: 1000px;
+  width: 100%;
+}
