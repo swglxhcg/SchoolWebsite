@@ -408,7 +408,7 @@ header.t-scrtop nav.t-nav{
 header.t-scrtop .t-center-logo-block{
   visibility: visible;
   visibility: 1;
-  width: 10%;
+  width: 15%;
   height: 0;
   /* position: relative; */
 }
@@ -416,7 +416,7 @@ header.t-scrtop .t-center-logo-block{
 header.t-scrtop .t-fsnav-box{
   position: fixed;
 }
-/* 占位符原样式 */
+/* 占位符原样式(hidden) */
 .t-center-logo-block{
   visibility: hidden;
   opacity: 0;
