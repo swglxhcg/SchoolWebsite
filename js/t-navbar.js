@@ -1,16 +1,16 @@
 // 调用函数
 
-navSubShow();
-searchInputBoxShow();
-fsnavShowSwitch();
-scrollWindow();
-
+tNavSubShow();
+tSearchInputBoxShow();
+tFsnavShowSwitch();
+tScrollWindow();
+tRotpicPlay();
 
 // 调用函数END
 
 
 // 定义函数
-function navSubShow(){
+function tNavSubShow(){
 	var oNav = $('.t-nav');
 	var aLi = oNav.find('li.t-mainli');
 	aLi.hover(function (){
@@ -22,7 +22,7 @@ function navSubShow(){
 	})
 };
 
-function searchInputBoxShow(){
+function tSearchInputBoxShow(){
 	var scBtn = $('.t-sc-btn');
 	//var aLi = oNav.find('li.t-mainli');
     var tscBox = $(".t-sc-box");
@@ -47,7 +47,7 @@ function searchInputBoxShow(){
     })
 };
 
-function fsnavShowSwitch(){
+function tFsnavShowSwitch(){
     var fsctrlA=$(".t-fsnav-btn a");
     fsctrlA.click(function(){
         if($('body').hasClass('fsnavShow')){
@@ -60,38 +60,43 @@ function fsnavShowSwitch(){
     });
 };
 
-function scrollWindow(){
+function tScrollWindow(){
     $(window).scroll(function() {
         $(window).scrollTop() > $(".t-header").height() ? $(".t-header").addClass("t-scrtop") : $(".t-header").removeClass("t-scrtop");
     });
 };
 
-// function changeLogoArea(){
-//     $(".t-top .t-logo1").resize(function(){
-//         var t_logo_height=$(".t-logo1").height();
-//         var t_logo_width=$(".t-logo1").height();
-//         var t_w1=t_logo_width*0.38;
-//         var t_w2=t_logo_width*0.42;
-//         // var t_logo_coords1=`0, 0, $(t_w1), $(t_logo_height)`;
-//         var t_logo_coords1="0, 0, "+t_w1+", "+t_logo_height;
-//         // var t_logo_coords2=`$(t_w2), 0, $(t_logo_width), $(t_logo_height)`;
-//         var t_logo_coords2=t_w2+", 0, "+t_logo_width+", "+t_logo_height;
-//         $(".t-map-a-1").attr("coords", t_logo_coords1);
-//         $(".t-map-a-2").attr("coords", t_logo_coords2);
-//     });
-// };
+function tResizeWindow(){
+    $(window).resize(function () { 
+        
+    });
+};
 
-// function t_loaded_fun(){
-//     var t_logo_height=$(".t-logo1").height();
-//     var t_logo_width=$(".t-logo1").height();
-//     console.log(t_logo_height);
-//     console.log(t_logo_width);
-//     var t_w1=t_logo_width*0.38;
-//     var t_w2=t_logo_width*0.42;
-//     // var t_logo_coords1=`0, 0, $(t_w1), $(t_logo_height)`;
-//     var t_logo_coords1="0, 0, "+t_w1+", "+t_logo_height;
-//     // var t_logo_coords2=`$(t_w2), 0, $(t_logo_width), $(t_logo_height)`;
-//     var t_logo_coords2=t_w2+", 0, "+t_logo_width+", "+t_logo_height;
-//     $(".t-map-a-1").attr("coords", t_logo_coords1);
-//     $(".t-map-a-2").attr("coords", t_logo_coords2);
-// }
+function tRotpicPlay() { 
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const t_rotpic_item = document.querySelectorAll('.t-rotpic-item');
+        let t_curPic = 0;
+      
+        function showPic(index) {
+          t_rotpic_item.forEach((t_pic_item, i) => {
+            if (i === index) {
+              t_pic_item.classList.add('t-rotpic-active');
+            } else {
+              t_pic_item.classList.remove('t-rotpic-active');
+            }
+          });
+        }
+      
+        function nextPic() {
+          t_curPic++;
+          if (t_curPic >= t_rotpic_item.length) {
+            t_curPic = 0;
+          }
+          showPic(t_curPic);
+        }
+      
+        setInterval(nextPic, 3000); // 每 2 秒切换一张幻灯片
+      
+        showPic(t_curPic); // 显示第一张幻灯片
+      });
+};
