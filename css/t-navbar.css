@@ -111,10 +111,16 @@ a {
   right: 0;
 }
 
-.t-header:before{
+.t-header::before {
+  content: "";
+  display: block;
   position: absolute;
-  background-image: url("../images/header-bg.png") repeat-x;
-  top: 60px;
+  left: 0;
+  top: -0.05rem;
+  right: 0;
+  height: 110px;
+  background: url("../images/header-bg.png") center repeat-x;
+  background-size: auto 99%;
 }
 
 /* header底图 */
