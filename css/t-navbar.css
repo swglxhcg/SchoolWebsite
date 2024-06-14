@@ -22,6 +22,7 @@ a {
   width: 100%;
   min-width: 300px;
   top: 0;
+  /* Height Header */
   height: 110px;
   z-index: 10;
   position: relative;
@@ -35,7 +36,7 @@ a {
 }
 
 /* header底图 */
-.t-bg-header{
+.t-header .t-bg-header{
   position: absolute;
   width: 100%;
   top: 0;
@@ -43,7 +44,7 @@ a {
 }
 
 /* ====================Logo条==================== */
-.t-logo-bg{
+.t-header .t-logo-bg{
   /* background-image: url("/images/title_logo_bar.png"); */
   object-fit: none;
   height: 100%;
@@ -53,6 +54,7 @@ a {
 
 .t-header .t-mgTop{
   margin: 0 30px 0 !important;
+  height: 100% !important;
 }
 
 .t-header .logo {
@@ -70,7 +72,7 @@ a {
     *zoom: 1;
 }
 
-.t-header .t-logo1 {
+.t-header .logo .t-logo1 {
     width: 500px;
     float: left;
     position: absolute;
@@ -86,14 +88,14 @@ a {
   height: 80px;
 }
 
-.t-fsnav-btn {
+.t-fsnav-box .t-fsnav-btn {
   width: 100%;
   height: 100%;
   background: url("/images/search_btn_bg_withsd.png") right top;
   background-size: cover;
 }
 
-.t-fsnav-btn a{
+.t-fsnav-box .t-fsnav-btn a{
   /* 限定可点击区域 */
   width: 83.3%;
   height: 80%;
@@ -101,7 +103,7 @@ a {
   right: 0;
 }
 
-.t-fsnav-btn a img{
+.t-fsnav-box .t-fsnav-btn a img{
   position: absolute;
   display: block;
   right: 25%;
@@ -138,7 +140,7 @@ a {
   right: 50px;
   visibility: visible;
   z-index: -1;
-  padding: 10% 30% 10% 20%;
+  padding: 10% 20% 10% 20%;
   height: 70%;
   top: 5%;
 }
@@ -290,7 +292,7 @@ a {
   background-size: cover;
 }
 .t-fsnav .t-fsnav-main{
-  top: 60px;
+  top: 100px;
   position: absolute;
   margin: 0 auto;
   right: 5%;
@@ -299,7 +301,7 @@ a {
 
 .t-fsnav .t-fsnav-main ul{
 	list-style-type:none;
-	margin:0;
+	margin:0 10px 0 10px;
 	padding:0;
 }
 
@@ -309,6 +311,11 @@ a {
   /* 宽暂定 */
   width: 12.5%;
   text-align: center;
+}
+
+.t-fsnav h2{
+  margin: 0 0 10px 0;
+  height: 2em;
 }
 
 .t-fsnav h2 a{
@@ -391,33 +398,72 @@ body.fsnavShow .t-fsnav{
   opacity: 1;
 }
 
-/* 顶导航 */
-header.t-scrtop img{
+/* ====================顶导航==================== */
+header.t-scrtop > img{
   visibility: hidden;
   opacity: 0;
 }
 header.t-scrtop nav.t-nav{
   position: fixed;
-  top: 60px;
-  
+  top: 40px;
+  /* right: 0; */
+  line-height: 49px;
+  right: 60px;
+  left: 60px;
 }
-header.t-scrtop .t-center-logo{
+header.t-scrtop .t-top .t-sc-box{
+  position: fixed;
+  right: 7%;
+  top: 1px;
+}
+header.t-scrtop .t-center-logo-block{
   visibility: visible;
   visibility: 1;
-  width: 90px;
-  height: 90px;
-  position: absolute;
+  width: 410px;
+  height: 0;
+  /* position: relative; */
 }
-.t-center-logo{
+header.t-scrtop .t-fsnav-box{
+  position: fixed;
+}
+.t-center-logo-block{
   visibility: hidden;
   opacity: 0;
   position: absolute;
 }
+header.t-scrtop .t-center-logo .t-center-logo-bg{
+  height: 250%;
+  background: url("/images/center-logo.png") no-repeat;
+  background-position-x: center;
+  background-position-y: 0;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  left: 13px;
+  background-size: contain;
+}
+header.t-scrtop .t-center-logo{
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url("/images/title_top_bar.png") repeat-x;
+  background-size: cover;
+}
 
 /* ====================轮播图==================== */
 .t-rotpic{
-  height: 2000px;
+  height: 100%;
   position: absolute;
   top: 60px;
 }
 
+.othercontext{
+  height: 1000px;
+  width: 100%;
+}
