@@ -8,109 +8,14 @@ a {
   text-decoration: none;
 }
 
-.t-header, .t-fsnav, .t-nav, .t-fsnav a{
+/* ===========动画========== */
+.t-header, .t-fsnav, .t-nav, .t-fsnav a, .t-center-logo {
   /* 平滑动画效果 */
   transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
-}
-
-/* ====================header整体==================== */
-.t-header {
-  width: 100%;
-  min-width: 300px;
-  top: 0;
-  /* Height Header */
-  /* Height Header */
-  height: 110px;
-  z-index: 10;
-  position: relative;
-  right: 0;
-}
-
-.t-header:before{
-  position: absolute;
-  background-image: url("/images/header-bg.png") repeat-x;
-  top: 60px;
-}
-
-/* header底图 */
-.t-header .t-bg-header{
-  position: absolute;
-  width: 100%;
-  top: 0;
-  height: 100%;
-}
-
-/* ====================Logo条==================== */
-.t-header .t-logo-bg{
-  /* background-image: url("/images/title_logo_bar.png"); */
-  object-fit: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
-.t-header .t-mgTop{
-  margin: 0 30px 0 !important;
-  height: 100% !important;
-}
-
-.t-header .logo {
-    width: 95%;
-    position: relative;
-    left: 0;
-    overflow: visible;
-    font-size: 0;
-    top: 15px;
-    z-index: 10;
-}
-.t-header .logo a {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
-.t-header .logo .t-logo1 {
-    width: 500px;
-    float: left;
-    position: absolute;
-}
-
-/* ====================全屏导航按钮==================== */
-.t-fsnav-box{
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 80px;
-  z-index: 10;
-  height: 80px;
-}
-
-.t-fsnav-box .t-fsnav-btn {
-.t-fsnav-box .t-fsnav-btn {
-  width: 100%;
-  height: 100%;
-  background: url("/images/search_btn_bg_withsd.png") right top;
-  background-size: cover;
-}
-
-.t-fsnav-box .t-fsnav-btn a{
-.t-fsnav-box .t-fsnav-btn a{
-  /* 限定可点击区域 */
-  width: 83.3%;
-  height: 80%;
-  position: absolute;
-  right: 0;
-}
-
-.t-fsnav-box .t-fsnav-btn a img{
-  position: absolute;
-  display: block;
-  right: 25%;
-  top: 30%;
 }
 
 /* ====================搜索框==================== */
@@ -159,6 +64,102 @@ a {
   width: 100%;
 }
 
+/* ====================全屏导航按钮==================== */
+.t-fsnav-box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  z-index: 10;
+  height: 80px;
+}
+
+
+.t-fsnav-box .t-fsnav-btn {
+  width: 100%;
+  height: 100%;
+  background: url("../images/search_btn_bg_withsd.png") right top;
+  background-size: cover;
+}
+
+
+.t-fsnav-box .t-fsnav-btn a{
+  /* 限定可点击区域 */
+  width: 83.3%;
+  height: 80%;
+  position: absolute;
+  right: 0;
+}
+
+.t-fsnav-box .t-fsnav-btn a img{
+  position: absolute;
+  display: block;
+  right: 25%;
+  top: 30%;
+}
+
+/* ====================header整体==================== */
+.t-header {
+  width: 100%;
+  min-width: 300px;
+  top: 0;
+  /* Height Header */
+  /* Height Header */
+  height: 110px;
+  z-index: 10;
+  position: relative;
+  right: 0;
+}
+
+.t-header:before{
+  position: absolute;
+  background-image: url("../images/header-bg.png") repeat-x;
+  top: 60px;
+}
+
+/* header底图 */
+.t-header .t-bg-header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+
+/* ====================Logo条==================== */
+.t-header .t-logo-bg{
+  /* background-image: url("../images/title_logo_bar.png"); */
+  object-fit: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.t-header .t-mgTop{
+  margin: 0 30px 0 !important;
+  height: 100% !important;
+}
+
+.t-header .logo {
+    width: 95%;
+    position: relative;
+    left: 0;
+    overflow: visible;
+    font-size: 0;
+    top: 15px;
+    z-index: 10;
+}
+.t-header .logo a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.t-header .logo .t-logo1 {
+    width: 500px;
+    float: left;
+    position: absolute;
+}
+
 /* ====================一级导航栏==================== */
 .t-nav {
   height: 0px;
@@ -174,6 +175,7 @@ a {
   font-size: 0;
   text-align: center;
   white-space: nowrap;
+  padding: 0 !important;
 }
 .t-nav > ul > li ,.t-nav > ul > div {
   position: relative;
@@ -210,6 +212,34 @@ a {
   display: block;
 }
 
+/* ====================二级导航默认样式==================== */
+.t-navSub {
+  width: 100%;
+  background: #9a0000;
+  white-space: normal;
+}
+.t-navSub {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  display: none;
+}
+
+.t-navSub ul{
+  padding: 0;
+}
+
+.t-navSub a {
+  color: #fff;
+  padding: 10px;
+  display: block;
+  line-height: 24px;
+  border-top: 1px solid #9a0000;
+  font-size: 16px;
+}
+.t-navSub a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 
 /* ==========二级导航显示动画效果 帧动画========== */
 .flipInY{
@@ -251,36 +281,8 @@ a {
   }
 }
 
-/* ====================二级导航默认样式==================== */
-.t-navSub {
-  width: 100%;
-  background: #9a0000;
-  white-space: normal;
-}
-.t-navSub {
-  position: absolute;
-  right: 0;
-  top: 48px;
-  display: none;
-}
 
-.t-navSub ul{
-  padding: 0;
-}
-
-.t-navSub a {
-  color: #fff;
-  padding: 10px;
-  display: block;
-  line-height: 24px;
-  border-top: 1px solid #9a0000;
-  font-size: 16px;
-}
-.t-navSub a:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-/* ====================全屏导航==================== */
+/* ====================全屏导航 导航栏详细设置==================== */
 .t-fsnav{
   visibility: hidden;
   opacity: 0;
@@ -291,7 +293,7 @@ a {
   position: fixed;
   width: 100%;
   /* 背景图变暗 */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/fsnavBg.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fsnavBg.jpg") no-repeat;
   background-size: cover;
 }
 .t-fsnav .t-fsnav-main{
@@ -329,56 +331,15 @@ a {
   /* 鼠标划过 */
   color: gold;
 }
+.t-fsnav h3{
+  height: 2em;
+}
 .t-fsnav h3 a{
   color: #aaaaaa;
 }
 
 
-/* ==========页面上移，导致导航栏在画面外 时的样式========== */
-.t-header.currents {
-  height: 85px;
-  line-height: 85px;
-  background: none;
-  background-color: #970000;
-  top: 0;
-}
-.t-header.currents .logo {
-  top: 50%;
-  transform: translateY(-50%);
-}
-.t-header.currents .t-logo1 {
-  width: 320px;
-}
-.t-header.currents .logo img {
-  display: block;
-}
-.t-header.currents .top {
-  height: 85px;
-}
-.t-header.currents .ser {
-  display: none;
-}
-.t-header.currents .top_nav {
-  display: none;
-}
-.t-header.currents .t-nav {
-  bottom: 50%;
-  transform: translateY(50%);
-}
-.t-header.currents .t-nav li {
-  background: none;
-}
-.t-header.currents .t-navSub {
-  top: 48px;
-}
-.t-header.currents .t-nav-wrapper {
-  height: 56px;
-}
-.t-header.currents {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* ====================全屏导航==================== */
+/* ====================全屏导航 元素排列==================== */
 body.fsnavShow{
   /* 隐藏视区外内容 */
   overflow: hidden;
@@ -401,42 +362,64 @@ body.fsnavShow .t-fsnav{
   opacity: 1;
 }
 
-/* ====================顶导航==================== */
+body.fsnavShow .t-top > .logo > img{
+  position: fixed;
+  left: 30px;
+}
+
+/* ==========页面上移，导致导航栏在画面外 时的样式========== */
+
+
+/* 去除动画 */
+header.t-scrtop .t-nav, .t-fsnav a{
+  transition: none;
+  -ms-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+}
+/* 隐藏红底条 */
 header.t-scrtop > img{
   visibility: hidden;
   opacity: 0;
 }
+/* 导航栏 */
 header.t-scrtop nav.t-nav{
   position: fixed;
   top: 40px;
   /* right: 0; */
   line-height: 49px;
-  right: 60px;
-  left: 60px;
+  right: 0;
+  left: 0;
 }
-header.t-scrtop .t-top .t-sc-box{
+/* 搜索按钮 */
+ header.t-scrtop .t-top .t-sc-box{
   position: fixed;
-  right: 7%;
-  top: 1px;
+  right: 5%;
+  top: 85%;
 }
+/* 占位符 */
 header.t-scrtop .t-center-logo-block{
   visibility: visible;
   visibility: 1;
-  width: 410px;
+  width: 10%;
   height: 0;
   /* position: relative; */
 }
+/* 全屏按钮 */
 header.t-scrtop .t-fsnav-box{
   position: fixed;
 }
+/* 占位符原样式 */
 .t-center-logo-block{
   visibility: hidden;
   opacity: 0;
   position: absolute;
 }
+/* 中logo红书底 */
 header.t-scrtop .t-center-logo .t-center-logo-bg{
-  height: 250%;
-  background: url("/images/center-logo.png") no-repeat;
+  height: 140%;
+  background: url("../images/center-logo-qztc.png") no-repeat;
   background-position-x: center;
   background-position-y: 0;
   width: 100%;
@@ -444,9 +427,18 @@ header.t-scrtop .t-center-logo .t-center-logo-bg{
   left: 0;
   right: 0;
   display: inline-block;
-  left: 13px;
+  left: 0;
   background-size: contain;
+  text-align: center;
 }
+
+/* 中logo内容 */
+header.t-scrtop .t-center-logo .t-center-logo-bg a{
+  display: block;
+  padding: 10%;
+}
+
+/* 新红底图 */
 header.t-scrtop .t-center-logo{
   position: fixed;
   left: 0;
@@ -455,7 +447,7 @@ header.t-scrtop .t-center-logo{
   width: 100%;
   display: flex;
   justify-content: center;
-  background: url("/images/title_top_bar.png") repeat-x;
+  background: url("../images/title_top_bar.png") repeat-x;
   background-size: cover;
 }
 
@@ -464,9 +456,10 @@ header.t-scrtop .t-center-logo{
   height: 100%;
   position: absolute;
   top: 60px;
+  width: 100%;
 }
 
 .othercontext{
-  height: 1000px;
+  height: 15000px;
   width: 100%;
 }
