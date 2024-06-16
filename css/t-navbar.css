@@ -173,6 +173,7 @@ a {
     position: absolute;
 }
 
+
 /* ====================一级导航栏==================== */
 .t-nav {
   height: 0px;
@@ -515,6 +516,10 @@ header.t-scrtop .t-btn-top{
   top: 60px;
   width: 100%;
   /* padding-top: 60px; */
+}
+
+.t-rotpic-ct a{
+  padding: 0 !important;
 }
 
 .t-rotpic-ct .t-rotpic-container{
