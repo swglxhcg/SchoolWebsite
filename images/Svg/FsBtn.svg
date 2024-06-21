@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 428.03 400.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名的渐变_43);
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <linearGradient id="_未命名的渐变_43" data-name="未命名的渐变 43" x1="76.02" y1="338.28" x2="368.23" y2="46.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5d8a74"/>
+      <stop offset="1" stop-color="#c73b21"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points=".53 .5 427.53 .5 427.53 400.02 27.14 400.02 .53 .5"/>
+</svg>
